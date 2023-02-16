@@ -1,0 +1,33 @@
+. Basic Lexer and Parser
+. Node with Environment
+. Keep track of all lexed tokens to look backwards (hashmap/LinkedList)
+. Unused token members and API has been removed
+
+- Node allocation overhaul.
+- Node creation helpers for integers, symbols.
+- Test environment code; it actually works now!
+- Parser now has a parsing context structure to keep track of the
+    program it is parsing over multiple expressions.
+- Parser now uses new node allocation API and creation helpers.
+- Types within variable declarations are looked up within the types
+    environment, found within the parsing context.
+
+. Parse initialised variable declaration (Parser)
+. Line Comments (Lexer)
+. Parse variable assignment correctly (Parser)
+. Parse function calls correctly (Parser)
+. Code Generation
+. TypeChecker
+. Parse conditional Expressions & Control Flow (Parser)
+. **POINTERS** sucks
+
+- Represent Functions as vars to pass them in function call
+- Division & BitShifting Operators
+- Use signed instead of unsigned division
+- Handle operators made of multiple delimeters (Lexer)
+- Modulo operator
+
+. Arrays
+. Type Cast # ToDo
+. String # ToDo
+. Function Overloading # Todo

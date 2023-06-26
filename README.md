@@ -10,32 +10,32 @@ FunCompiler is a statically typed, functional programming language which is a su
 ## Build
 
 1. generate a build tree using CMake.
-#+begin_src shell
+```shell
   cmake -B bld
-#+end_src
+```
 
 2. build an executable from the build tree.
-#+begin_src shell
+```shell
   cmake --build bld
-#+end_src
+```
 
 *** To build generated x86_64 ASM
 
 GNU Binutils:
-#+begin_src shell
+```shell
   as code.S -o code.o
   ld code.o -o code
-#+end_src
+```
 
 GNU Compiler Collection
-#+begin_src shell
+```shell
   gcc code.S -o code.exe
-#+end_src
+```
 
 LLVM/Clang
-#+begin_src shell
+```shell
   clang code.S -o code.exe --target=x86_64
-#+end_src
+```
 
 To use external calls, link with appropriate libraries!
 
@@ -56,7 +56,7 @@ control flow starts at the very top of the file and makes it's way to
 the bottom of the file.
 
 Let's take a look at a basic program:
-#+begin_example un
+```fun
 fact : integer (n : integer) = integer (n : integer) {
   if n < 2 {
     1
@@ -66,7 +66,7 @@ fact : integer (n : integer) = integer (n : integer) {
 }
 
 fact(5)
-#+end_example
+```
 
 This program will return 120 as a status code. The result of the last
 expression in the file is the return value. The same holds true for

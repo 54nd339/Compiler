@@ -1,17 +1,20 @@
-** Building
+# FunCompiler
 
-Dependencies:
+FunCompiler is a statically typed, functional programming language which is a subset of C. Whitespace is ignored and there are no required expression delimiters. That's right: no semi-colons and no forced indent!
 
-- [[https://cmake.org/][CMake >= 3.14]]
+## Dependencies
 
-- Any C Compiler (We like [[https://gcc.gnu.org/][GCC]])
+- [CMake >= 3.14](https://cmake.org/)
+- Any C Compiler (We like [GCC](https://gcc.gnu.org/))
 
-First, generate a build tree using CMake.
+## Build
+
+1. generate a build tree using CMake.
 #+begin_src shell
   cmake -B bld
 #+end_src
 
-Finally, build an executable from the build tree.
+2. build an executable from the build tree.
 #+begin_src shell
   cmake --build bld
 #+end_src
@@ -36,7 +39,7 @@ LLVM/Clang
 
 To use external calls, link with appropriate libraries!
 
-** Language Reference
+## Language Reference
 
 The language is statically typed.
 Variables must be declared and type annotated before use.
